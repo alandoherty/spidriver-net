@@ -525,7 +525,7 @@ namespace SpiDriver
         }
 
         /// <summary>
-        /// Creates a new device with the specified serial port.
+        /// Creates a new device with the specified serial port. The port must be configured to a baud rate of 460800, parity none, and stop bits one.
         /// </summary>
         /// <param name="port">The port.</param>
         public Device(SerialPort port) {
