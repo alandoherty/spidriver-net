@@ -227,7 +227,7 @@ namespace SpiDriver
                 } else if (output == Output.B) {
                     _port.Write(new byte[] { (byte)'b', enable ? (byte)1 : (byte)0 }, 0, 2);
                 } else if (output == Output.CS) {
-                    _port.Write(new byte[] { enable ? (byte)'s' : (byte)'u'}, 0, 2);
+                    _port.Write(new byte[] { enable ? (byte)'s' : (byte)'u'}, 0, 1);
                 } else {
                     throw new NotImplementedException();
                 }
@@ -254,7 +254,7 @@ namespace SpiDriver
                     } else if (output == Output.B) {
                         _port.Write(new byte[] { (byte)'b', enable ? (byte)1 : (byte)0 }, 0, 2);
                     } else if (output == Output.CS) {
-                        _port.Write(new byte[] { enable ? (byte)'s' : (byte)'u' }, 0, 2);
+                        _port.Write(new byte[] { enable ? (byte)'s' : (byte)'u' }, 0, 1);
                     } else {
                         throw new NotImplementedException();
                     }
