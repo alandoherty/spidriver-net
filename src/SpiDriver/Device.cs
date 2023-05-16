@@ -62,7 +62,7 @@ namespace SpiDriver
             int dataRemaining = count;
 
             while (dataRemaining > 0) {
-                int dataRead = _port.Read(buffer, count - dataRemaining, dataRemaining);
+                int dataRead = _port.Read(buffer, count - dataRemaining + offset, dataRemaining);
                 dataRemaining -= dataRead;
             }
         }
